@@ -51,5 +51,12 @@ public class Main {
         System.out.println(ac.binToDec("100"));
         System.out.println(ac.binToDec("1001"));
 
+//        int i = 2;
+//        int j = 3;
+//        System.out.println(j/i);
+//        System.out.println((double)j/i);
+//        System.out.println((double)(j/i));
+        System.out.println("XXXXX");
+        System.out.println(ac.decToBin(8));
     }
 }

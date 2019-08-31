@@ -112,6 +112,14 @@ public class AlgorithmsController {
         return dec;
     }
     public String decToBin(int dec){
-        return null;
+        String result = "";
+        while(dec > 1){
+            // do wyniku zapisujemy wynika działania modulo
+            result += String.valueOf(dec % 2);
+            // każdowazowo wykonujemy podział liczby
+            dec = dec / 2;
+        }
+        result += "1";
+        return new StringBuilder(result).reverse().toString();
     }
 }
