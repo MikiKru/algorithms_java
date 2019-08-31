@@ -25,6 +25,12 @@ public class Main {
         int [] results = ac.arithSeries(a1,r,n);
         System.out.printf("Suma %d-elemetów: %d i %d-ty element: %d\n",
                 n, results[0],n, results[1]);
-
+        int number = 6;
+        System.out.printf("Dzielniki liczby %d to: %s\n",
+                number, ac.getDividers(number).toString());
+        System.out.println(
+                "Liczba "+ number + " " + (ac.isExcellent(number)?
+                        "jest doskonała" : "nie jest doskonała")
+        );
     }
 }

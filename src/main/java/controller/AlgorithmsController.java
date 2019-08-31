@@ -1,7 +1,9 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 // klasa implementująca rozwiązania
 public class AlgorithmsController {
@@ -44,6 +46,25 @@ public class AlgorithmsController {
                 a1 + power(r,n-1)
         };
         return results;
+    }
+    public List<Integer> getDividers(int number){
+        List<Integer> dividers = new ArrayList<>();
+        for(int i = (number - 1); i > 0; i--){
+            if(number % i == 0){
+                dividers.add(i);
+            }
+        }
+        return dividers;
+    }
+    public boolean isExcellent(int number){
+        int sum = 0;
+        // suma wszystkich elementów listy dzialników
+        for(int divider : getDividers(number)){
+            sum += divider;
+        }
+        // wyrażenie 3-argumentowe
+        // (warunek) ? wartość jeżeli prawdziwy : wartość jeżeli fałszywy
+        return (sum == number) ? true : false;
     }
 
 }
