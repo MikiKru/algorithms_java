@@ -49,7 +49,7 @@ public class AlgorithmsController {
     }
     public List<Integer> getDividers(int number){
         List<Integer> dividers = new ArrayList<>();
-        for(int i = (number - 1); i > 0; i--){
+        for(int i = number; i > 0; i--){
             if(number % i == 0){
                 dividers.add(i);
             }
@@ -58,13 +58,33 @@ public class AlgorithmsController {
     }
     public boolean isExcellent(int number){
         int sum = 0;
+        // lista dzielników
+        List<Integer> dividers = getDividers(number);
+        // usunięcie pierwszego elementu
+        dividers.remove(0);
         // suma wszystkich elementów listy dzialników
-        for(int divider : getDividers(number)){
+        for(int divider : dividers){
             sum += divider;
         }
         // wyrażenie 3-argumentowe
         // (warunek) ? wartość jeżeli prawdziwy : wartość jeżeli fałszywy
         return (sum == number) ? true : false;
     }
+    public int getNWD(int num1, int num2){
+        // sprawdzamy która liczba jest większa
+        int max = num1;
+        int min = num2;
+        if(num1 < num2){
+            max = num2;
+            min = num1;
+        }
+        for(int divider : getDividers(min)){
+            if(max % divider == 0){
+                return divider;
+            }
+        }
+        return 1;
+    }
+
 
 }

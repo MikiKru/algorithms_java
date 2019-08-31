@@ -32,5 +32,9 @@ public class Main {
                 "Liczba "+ number + " " + (ac.isExcellent(number)?
                         "jest doskonała" : "nie jest doskonała")
         );
+        int num1 = 55;
+        int num2 = 11;
+        System.out.printf("NWD dla liczv %d i %d wynosi: %d",
+                num1, num2, ac.getNWD(num1,num2));
     }
 }
