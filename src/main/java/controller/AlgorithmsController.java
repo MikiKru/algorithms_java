@@ -100,5 +100,18 @@ public class AlgorithmsController {
         }while(elements.size() < n);
         return elements;
     }
-
+    public int binToDec(String bin){
+        // manipulacja napisami - pozwala ingerować w napis
+        StringBuilder sb = new StringBuilder(bin);
+        // odwrócenie napisu
+        bin = sb.reverse().toString();
+        int dec = 0;
+        for(int i = 0; i < bin.length(); i++){
+            dec += Character.getNumericValue(bin.charAt(i)) * power(2, i);
+        }
+        return dec;
+    }
+    public String decToBin(int dec){
+        return null;
+    }
 }

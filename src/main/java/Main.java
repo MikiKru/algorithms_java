@@ -1,5 +1,7 @@
 import controller.AlgorithmsController;
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.*;
 // klasa uruchamiająca projekt
 public class Main {
@@ -39,7 +41,15 @@ public class Main {
 
         System.out.println(ac.isPrimeNumber(15));
         System.out.println(ac.isPrimeNumber(13));
-        System.out.println(ac.generatePrimeNumbers(10));
-    }
+        // pomiar czasu
+        LocalTime t_start = LocalTime.now();
+        ac.generatePrimeNumbers(100);
+        LocalTime t_stop = LocalTime.now();
+        Long time_interval = Duration.between(t_start,t_stop).toMillis();
+        System.out.println("Czas wykonania programu: "+time_interval+" ms");
 
+        System.out.println(ac.binToDec("100"));
+        System.out.println(ac.binToDec("1001"));
+
+    }
 }
