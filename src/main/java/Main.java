@@ -11,5 +11,12 @@ public class Main {
         System.out.printf("%d ^ %d = %d\n",x, y, ac.power(x,y));
         int n = 4;
         System.out.printf("%d! = %d\n", n, ac.factorial(n));
+
+        int a1 = 2;
+        int q = 3;
+        n = 4;
+        Map<String,Double> geoSeriesMap = ac.geoSeries(a1,q,n);
+        System.out.printf("Suma %d-elemetów: %f i %d-ty element: %f",
+                n, geoSeriesMap.get("sum"),n, geoSeriesMap.get("element"));
     }
 }
