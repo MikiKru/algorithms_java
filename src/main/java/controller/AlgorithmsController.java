@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
+import java.util.*;
 
 // klasa implementująca rozwiązania
 public class AlgorithmsController {
@@ -121,5 +118,31 @@ public class AlgorithmsController {
         }
         result += "1";
         return new StringBuilder(result).reverse().toString();
+    }
+    public List<Integer> getRandomValues(int lowBound, int topBound, int n){
+        Random random = new Random();
+        List<Integer> randomNumbers = new ArrayList<>();
+        for(int i = 0; i < n; i++){
+            randomNumbers.add(random.nextInt(topBound - lowBound + 1) + lowBound);
+        }
+        return randomNumbers;
+    }
+    public double getTempAvg(double support, int lowBound, int topBound, int n){
+        List<Integer> randomNumbers = getRandomValues(lowBound, topBound, n);
+        System.out.println(randomNumbers);
+        double maxSupp = topBound - (support * (topBound - lowBound));
+        double minSupp = lowBound + (support * (topBound - lowBound));
+        System.out.println("MIN:" + minSupp);
+        System.out.println("MAX:" + maxSupp);
+        List<Integer> preparedValues = new ArrayList<>();
+        int sum = 0;
+        for(Integer number : randomNumbers){
+            if(number < maxSupp && number > minSupp){
+                preparedValues.add(number);
+                sum += number;
+            }
+        }
+        System.out.println(preparedValues);
+        return sum / (double) preparedValues.size();
     }
 }
