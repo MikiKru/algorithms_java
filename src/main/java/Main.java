@@ -34,7 +34,12 @@ public class Main {
         );
         int num1 = 55;
         int num2 = 11;
-        System.out.printf("NWD dla liczv %d i %d wynosi: %d",
+        System.out.printf("NWD dla liczv %d i %d wynosi: %d\n",
                 num1, num2, ac.getNWD(num1,num2));
+
+        System.out.println(ac.isPrimeNumber(15));
+        System.out.println(ac.isPrimeNumber(13));
+        System.out.println(ac.generatePrimeNumbers(10));
     }
+
 }

@@ -85,6 +85,20 @@ public class AlgorithmsController {
         }
         return 1;
     }
-
+    public boolean isPrimeNumber(int n){
+        return getDividers(n).size() == 2;
+    }
+    public List<Integer> generatePrimeNumbers(int n){
+        List<Integer> elements = new ArrayList<>();
+        int i = 3;
+        do{
+            // spr czy kolejna liczba naturalna jest pierwsza
+            if(isPrimeNumber(i)){
+                elements.add(i);
+            }
+            i++;
+        }while(elements.size() < n);
+        return elements;
+    }
 
 }
