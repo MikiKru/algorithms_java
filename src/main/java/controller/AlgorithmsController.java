@@ -68,7 +68,7 @@ public class AlgorithmsController {
         }
         // wyrażenie 3-argumentowe
         // (warunek) ? wartość jeżeli prawdziwy : wartość jeżeli fałszywy
-        return (sum == number) ? true : false;
+        return sum == number;
     }
     public int getNWD(int num1, int num2){
         // sprawdzamy która liczba jest większa
