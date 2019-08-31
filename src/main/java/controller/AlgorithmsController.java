@@ -26,7 +26,6 @@ public class AlgorithmsController {
         double sum = 0;
         for(int i = 1; i <= n; i++){
             sum += a1*power(q,i-1);
-            System.out.println(sum);
         }
         // przekazujemy do mapy sumę ciągu
         geoSeriesMap.put("sum", sum);
@@ -34,6 +33,17 @@ public class AlgorithmsController {
         geoSeriesMap.put("element", (double) (a1*power(q,n-1)));
         // zwacamy mapę wartości
         return geoSeriesMap;
+    }
+    public int[] arithSeries(int a1, int r, int n){
+        int sum = 0;
+        for(int i = 1; i <= n; i++){
+            sum += a1 + power(r,i-1);
+        }
+        int [] results = {
+                sum,
+                a1 + power(r,n-1)
+        };
+        return results;
     }
 
 }
