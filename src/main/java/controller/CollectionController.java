@@ -36,6 +36,22 @@ public class CollectionController {
             users.remove(findUserByIdStream(user_id).get());
         }
     }
+    public void addRoleToUser(int user_id, Role role){
+        if(findUserByIdStream(user_id).isPresent()){
+            User user = findUserByIdStream(user_id).get();
+            user.addRole(role);
+            int index = users.indexOf(user);
+            users.set(index,user);
+        }
+    }
+    public void removeRoleToUser(int user_id, Role role){
+        if(findUserByIdStream(user_id).isPresent()){
+            User user = findUserByIdStream(user_id).get();
+            user.removeRole(role);
+            int index = users.indexOf(user);
+            users.set(index,user);
+        }
+    }
     public void updateUserById(int user_id, double percent){
         if(findUserByIdStream(user_id).isPresent()){
             User user = findUserByIdStream(user_id).get();

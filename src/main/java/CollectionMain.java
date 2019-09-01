@@ -1,4 +1,5 @@
 import controller.CollectionController;
+import model.enums.Role;
 
 import java.time.LocalDate;
 
@@ -17,6 +18,10 @@ public class CollectionMain {
         cc.deleteUserById(2);
         // zmiana pensji
         cc.updateUserById(1, 0.5);
+        // dodanie roli
+        cc.addRoleToUser(1, Role.ROLE_ADMIN);
+        // usunięcie roli
+        cc.removeRoleToUser(4,Role.ROLE_USER);
         // wypisanie listy użytkowników
         cc.getUsers();
     }
