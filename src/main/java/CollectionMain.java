@@ -21,7 +21,7 @@ public class CollectionMain {
         // dodanie roli
         cc.addRoleToUser(1, Role.ROLE_ADMIN);
         // usunięcie roli
-        cc.removeRoleToUser(4,Role.ROLE_USER);
+        cc.removeRoleToUser(4,Role.ROLE_ADMIN);
         // wypisanie listy użytkowników
         cc.getUsers();
     }

@@ -19,6 +19,14 @@
             </plugin>
         </plugins>
     </build>
-
+    <!--dodawanie zależności do projektu-->
+    <dependencies>
+        <!--zależność do lomboka-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+    </dependencies>
 
 </project>
