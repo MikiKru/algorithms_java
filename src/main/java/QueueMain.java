@@ -10,7 +10,13 @@ public class QueueMain {
     private Deque<String> commits = new ArrayDeque<>();
 
     public void removeLastNCommits(int nCommits){
-        //???
+        for(int i = nCommits; i > 0; i--){
+            // przerwanie gdy nCommits > commits.size()
+            if(commits.isEmpty()){
+                break;
+            }
+            System.out.println(commits.removeLast());
+        }
     }
 
     public static void main(String[] args) {
@@ -43,7 +49,7 @@ public class QueueMain {
         main.commits.addLast("c8");
 
         // zaimplemntuj metodę usuwająca zadaną przez użytkownika liczbę commitów
-        
+        main.removeLastNCommits(15);
 
 
     }
