@@ -26,6 +26,7 @@ public class ExceptionMain {
                     case "2":
                         System.out.println("Wprowadź kwotę w PLN lub cofnij do menu (0)");
                         double amount = scanner.nextDouble();
+                        System.out.println("Amount: " + amount);
                         // pelecenie 'konsumujące' zank enter -> \n
                         scanner.nextLine();
                         if (choice.equals("1") && amount != 0) {
@@ -51,11 +52,15 @@ public class ExceptionMain {
                         throw new ChoiceException();
                 }
             } catch (InputMismatchException e) {
-                // obsługa wyjątku
+                System.out.println("Input mismatch");
+//                e.printStackTrace();
+
             } catch (ChoiceException e){
 
             } catch (SaldoException e){
 
+            } finally {
+                scanner.nextLine();
             }
         }
     }
