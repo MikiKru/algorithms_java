@@ -58,6 +58,8 @@ public class ExceptionMain {
             } catch (ChoiceException e) {
 
             } catch (SaldoException e) {
+            } catch (Exception e){
+                e.printStackTrace();
             }
         }
     }

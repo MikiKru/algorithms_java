@@ -5,6 +5,7 @@ import java.time.LocalTime;
 import java.util.*;
 // klasa uruchamiająca projekt
 public class Main {
+
     public static void main(String[] args) {
         AlgorithmsController ac =
                 new AlgorithmsController();
@@ -60,5 +61,6 @@ public class Main {
         System.out.println(ac.decToBin(8));
 
         System.out.println(ac.getTempAvg(0.1,-10,10,10));
+
     }
 }
