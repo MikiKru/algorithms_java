@@ -49,7 +49,7 @@ public class User {
     }
     @Override
     public String toString() {
-        return String.format("|%5d|%15s|%15s|%15s|%10.2f|",user_id, name,lastname,birthdate,salary);
+        return String.format("|%5d|%15s|%15s|%15s|%10.2f|%30s|",user_id, name,lastname,birthdate,salary,roles);
     }
 
     public int getUser_id() {

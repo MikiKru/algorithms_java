@@ -1,6 +1,7 @@
 package controller;
 
 import model.User;
+import model.enums.Role;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -11,8 +12,10 @@ public class CollectionController {
 
     public void addUser(String name, String lastname, LocalDate birthdate, Double salary){
         // dodanie użytkownika do listy
-        users.add(new User(name, lastname, birthdate, salary, true));
-        System.out.println("Dodano użtkownika");
+        User user = new User(name, lastname, birthdate, salary, true);
+        // dodaje domyślnie rolę ROLE_USER
+        user.addRole(Role.ROLE_USER);
+        users.add(user);
     }
     public User findUserById(int user_id){
         for(User user : users){
