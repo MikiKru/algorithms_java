@@ -33,7 +33,7 @@ public class ExceptionMain {
                             saldo += amount;
                             System.out.printf("Konto zasilone kwotą %.2f PLN \n", amount);
                         } else if (choice.equals("2") && amount != 0) {
-                            if(saldo < amount){
+                            if (saldo < amount) {
                                 throw new SaldoException();
                             }
                             saldo -= amount;
@@ -54,13 +54,10 @@ public class ExceptionMain {
             } catch (InputMismatchException e) {
                 System.out.println("Input mismatch");
 //                e.printStackTrace();
+                    scanner.nextLine();
+            } catch (ChoiceException e) {
 
-            } catch (ChoiceException e){
-
-            } catch (SaldoException e){
-
-            } finally {
-                scanner.nextLine();
+            } catch (SaldoException e) {
             }
         }
     }
