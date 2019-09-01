@@ -50,6 +50,7 @@ public class CollectionController {
         for (User user : users) {
             System.out.println(user);
         }
+        System.out.println("XXXXXXXXXXXXXXXXXXXXX");
     }
 
 }

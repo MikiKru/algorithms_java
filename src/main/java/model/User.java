@@ -1,5 +1,9 @@
 package model;
 
+import model.enums.Role;
+
+import java.util.HashSet;
+import java.util.Set;
 import java.time.LocalDate;
 // wzorzec JavaBeans
 // GET / SET
@@ -15,6 +19,21 @@ public class User {
     private LocalDate birthdate;
     private Double salary;
     private boolean activity;
+    // zbiór ról
+    Set<Role> roles = new HashSet<>();
+
+    // dodawanie roli do zbioru ról
+
+    // odbieranie uprawnień
+
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 
     public User() {}
     public User(String name, String lastname, LocalDate birthdate, Double salary, boolean activity) {

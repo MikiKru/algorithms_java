@@ -13,5 +13,11 @@ public class CollectionMain {
         cc.addUser("Adam","Kowalski", LocalDate.of(2002,01,01),8899.99);
         // wypisanie zawartości bazy
         cc.getUsers();
+        // usunięcie użytkownika
+        cc.deleteUserById(2);
+        // zmiana pensji
+        cc.updateUserById(1, 0.5);
+        // wypisanie listy użytkowników
+        cc.getUsers();
     }
 }
