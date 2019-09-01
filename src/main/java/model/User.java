@@ -20,13 +20,16 @@ public class User {
     private Double salary;
     private boolean activity;
     // zbiór ról
-    Set<Role> roles = new HashSet<>();
+    private Set<Role> roles = new HashSet<>();
 
     // dodawanie roli do zbioru ról
-
+    public void addRole(Role role){
+        roles.add(role);
+    }
     // odbieranie uprawnień
-
-
+    public void removeRole(Role role){
+        roles.remove(role);
+    }
     public Set<Role> getRoles() {
         return roles;
     }
