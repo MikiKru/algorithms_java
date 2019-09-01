@@ -6,6 +6,10 @@ import java.time.LocalDate;
 // KONSTRUKTORY
 // toString
 public class User {
+    // pole statyczne związane z klasą User
+    private static int id = 1;
+    // pole obiektowe związane z instancją kalsy user
+    private int user_id;
     private String name;
     private String lastname;
     private LocalDate birthdate;
@@ -14,6 +18,7 @@ public class User {
 
     public User() {}
     public User(String name, String lastname, LocalDate birthdate, Double salary, boolean activity) {
+        this.user_id = id++;
         this.name = name;
         this.lastname = lastname;
         this.birthdate = birthdate;
@@ -22,7 +27,15 @@ public class User {
     }
     @Override
     public String toString() {
-        return String.format("|%15s|%15s|%15s|%10.2f|",name,lastname,birthdate,salary);
+        return String.format("|%5d|%15s|%15s|%15s|%10.2f|",user_id, name,lastname,birthdate,salary);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public boolean isActivity() {
