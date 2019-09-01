@@ -136,13 +136,16 @@ public class AlgorithmsController {
         System.out.println("MAX:" + maxSupp);
         List<Integer> preparedValues = new ArrayList<>();
         int sum = 0;
+        int sumOriginal = 0;
         for(Integer number : randomNumbers){
+            sumOriginal += number;
             if(number < maxSupp && number > minSupp){
                 preparedValues.add(number);
                 sum += number;
             }
         }
         System.out.println(preparedValues);
+        System.out.println(sumOriginal/(double)randomNumbers.size());
         return sum / (double) preparedValues.size();
     }
 }

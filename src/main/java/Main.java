@@ -59,6 +59,6 @@ public class Main {
         System.out.println("XXXXX");
         System.out.println(ac.decToBin(8));
 
-        System.out.println(ac.getTempAvg(0.1,-10,10,1000));
+        System.out.println(ac.getTempAvg(0.1,-10,10,10));
     }
 }
