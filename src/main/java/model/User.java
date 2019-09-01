@@ -30,12 +30,12 @@ public class User {
         return String.format("|%5d|%15s|%15s|%15s|%10.2f|",user_id, name,lastname,birthdate,salary);
     }
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public boolean isActivity() {
