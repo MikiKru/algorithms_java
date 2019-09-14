@@ -39,15 +39,21 @@ public class BubbleSort {
         return numbers;
     }
     public List<Integer> bsortDynamicWithTypes(List<Integer> numbers, String type) {
-        boolean isSorted = true;
-        for (int i = 0; i < numbers.size() - 1; i++) {
+        boolean isUnsorted = true;
+        for (int i = 0; isUnsorted; i++) {
+            // licznik wejść do if-a
+            int counter = 0;
             for (int j = 0; j < numbers.size() - 1; j++) {
                 if (type.toUpperCase().equals("ASC") ? numbers.get(j) > numbers.get(j + 1) : numbers.get(j) < numbers.get(j + 1)) {
                     int tmp = numbers.get(j);
                     numbers.set(j, numbers.get(j + 1));
                     numbers.set(j + 1, tmp);
+                    // inkrementacja licznika
+                    counter++;
                 }
             }
+            // sprawdzamy stan licznika
+            if(counter == 0) isUnsorted = false;
             System.out.println(numbers);
         }
         return numbers;
@@ -62,7 +68,9 @@ public class BubbleSort {
         System.out.println();
         bubbleSort.bsortWithTypes(new ArrayList<>(Arrays.asList(1,2,3,4,5,7,6,8,10)),"asc")
                 .stream().forEach(number -> System.out.print(number + " "));
-
+        System.out.println();
+        bubbleSort.bsortDynamicWithTypes(new ArrayList<>(Arrays.asList(1,2,3,4,5,7,6,8,10)),"asc")
+                .stream().forEach(number -> System.out.print(number + " "));
 
 
 
