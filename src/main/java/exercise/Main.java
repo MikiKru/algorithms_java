@@ -30,6 +30,9 @@ public class Main {
         courseController.addParticipantToCourse("javabyd10","Iwona","Las");
         // ???
         courseController.addParticipantToCourse("javabyd14","Iwona","Las");
+        System.out.println("Przed usuwaniem");
         courseController.getCourtses();
+        System.out.println("Po usuwaniu");
+        courseController.
     }
 }

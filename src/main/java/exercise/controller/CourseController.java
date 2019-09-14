@@ -43,4 +43,11 @@ public class CourseController {
             System.out.println("Nie udało się dodać uczestnika do kursu");
         }
     }
+    public void removeParticipantFromCourse(String acronim, int user_id){
+        if(courseService.removeParticipantFromCourse(acronim,user_id)){
+            System.out.println("Usunięto uczestnika kursu");
+        }else {
+            System.out.println("Nie udało się usunąć uczestnika kursu");
+        }
+    }
 }
