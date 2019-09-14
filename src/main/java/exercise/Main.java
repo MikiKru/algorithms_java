@@ -56,6 +56,6 @@ public class Main {
         courseController.getCourtses();
 
         System.out.println("Filtrowanie");
-        courseController.findCourseByDateOrCategory(LocalDate.now(), CourseCategory.dev_ops);
+        courseController.findCourseByDateOrCategory(null, null);
     }
 }
