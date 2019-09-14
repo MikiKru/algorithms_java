@@ -26,4 +26,7 @@ public class CourseController {
         // wywołaj metodę implementującą utworzenie kursu w logice biznesowej
         courseService.addCourse(acronim,category,participants,date,trainer);
     }
+    public void getCourtses(){
+        courses.forEach(System.out::println);
+    }
 }
