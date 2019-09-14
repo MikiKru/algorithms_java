@@ -33,4 +33,11 @@ public class CourseController {
     public void getCourtses(){
         courses.forEach(System.out::println);
     }
+    public void addParticipantToCourse(
+            String acronim,
+            String name,
+            String lastname){
+        courseService.addParticipantToCourse(
+                acronim,name,lastname);
+    }
 }

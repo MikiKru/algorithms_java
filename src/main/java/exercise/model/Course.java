@@ -18,6 +18,15 @@ public class Course {
     private LocalDate date;
     private String trainer;
 
+    // metoda dodająca jednego uczestnika do kursu
+    public void addParticipant(Participant participant){
+        participants.add(participant);
+    }
+    // metoda usuwająca jednego uczestnika z kursu
+    public void removeParticipant(Participant participant){
+        participants.remove(participant);
+    }
+
 //    public static void main(String[] args) {
 //        List<Participant> participants = new ArrayList<>(Arrays.asList(
 //               new Participant("U1","U1"),
