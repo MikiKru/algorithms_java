@@ -8,9 +8,30 @@ import exercise.model.Participant;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 // klasa logiki biznesowej - implementacja i walidacja
 public class CourseService {
+
+    public List<Course> findCourseByDateOrCategory(LocalDate date, CourseCategory category){
+        if(date == null && category == null){
+            return CourseController.courses;
+        } else if(date != null && category == null){
+            return CourseController.courses.stream()
+                    .filter(course -> course.getDate() == date)
+                    .collect(Collectors.toList());
+        } else if(date == null){
+            return CourseController.courses.stream()
+                    .filter(course -> course.getCategory() == category)
+                    .collect(Collectors.toList());
+        } else {
+            return CourseController.courses.stream()
+                    .filter(course -> (course.getCategory()==category && course.getDate() == date))
+                    .collect(Collectors.toList());
+        }
+    }
+
+
     public boolean updateTrainerInCourse(String acronim, String trainer){
         if(getCourseByAcronim(acronim).isPresent()){
             Course findedCourse = getCourseByAcronim(acronim).get();

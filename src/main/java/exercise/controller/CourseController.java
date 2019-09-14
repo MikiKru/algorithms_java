@@ -57,7 +57,9 @@ public class CourseController {
             System.out.println("Nie udało się zmienić trenera kursu");
         }
     }
-
+    public void findCourseByDateOrCategory(LocalDate date, CourseCategory category){
+        courseService.findCourseByDateOrCategory(date,category).forEach(System.out::println);
+    }
 
 
 
