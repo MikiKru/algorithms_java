@@ -53,8 +53,11 @@ public class BubbleSort {
                 }
             }
             // sprawdzamy stan licznika
-            if(counter == 0) isUnsorted = false;
-            System.out.println(numbers);
+            if(counter == 0){
+                isUnsorted = false;
+            } else {
+                System.out.println(numbers);
+            }
         }
         return numbers;
     }
