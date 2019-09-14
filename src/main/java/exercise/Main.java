@@ -24,7 +24,7 @@ public class Main {
                 "MK");
         // dodawanie uczestników
         courseController.addParticipantToCourse("javabyd11","Adam","Kowalski");
-        courseController.addParticipantToCourse("javabyd11","Anna","Kowalska");
+        courseController.addParticipantToCourse("javabyd11","Jan","Kot");
         courseController.addParticipantToCourse("javabyd10","Jan","Kot");
         courseController.addParticipantToCourse("javabyd10","Jan","Nowak");
         courseController.addParticipantToCourse("javabyd10","Iwona","Las");
@@ -33,6 +33,9 @@ public class Main {
         System.out.println("Przed usuwaniem");
         courseController.getCourtses();
         System.out.println("Po usuwaniu");
-        courseController.
+        courseController.removeParticipantFromCourse("javabyd10", 3);
+        courseController.removeParticipantFromCourse("javabyd11", 3);
+        courseController.removeParticipantFromCourse("javabyd15", 1);
+        courseController.getCourtses();
     }
 }

@@ -11,6 +11,14 @@ import java.util.Optional;
 
 // klasa logiki biznesowej - implementacja i walidacja
 public class CourseService {
+    public boolean updateTrainerInCourse(String acronim, String trainer){
+        if(getCourseByAcronim(acronim).isPresent()){
+            Course findedCourse = getCourseByAcronim(acronim).get();
+            findedCourse.setTrainer(trainer);
+            return true;
+        }
+        return false;
+    }
     public boolean removeParticipantFromCourse(String acronim, int user_id){
         if(getCourseByAcronim(acronim).isPresent()){
             // wyszukany kurs
