@@ -24,7 +24,12 @@ public class Main {
                 "MK");
         // dodawanie uczestników
         courseController.addParticipantToCourse("javabyd11","Adam","Kowalski");
-
+        courseController.addParticipantToCourse("javabyd11","Anna","Kowalska");
+        courseController.addParticipantToCourse("javabyd10","Jan","Kot");
+        courseController.addParticipantToCourse("javabyd10","Jan","Nowak");
+        courseController.addParticipantToCourse("javabyd10","Iwona","Las");
+        // ???
+        courseController.addParticipantToCourse("javabyd14","Iwona","Las");
         courseController.getCourtses();
     }
 }
