@@ -37,5 +37,10 @@ public class Main {
         courseController.removeParticipantFromCourse("javabyd11", 3);
         courseController.removeParticipantFromCourse("javabyd15", 1);
         courseController.getCourtses();
+        // zmiana trenera
+        System.out.println("Po zmianie trenera");
+        courseController.updateTrainerInCourse("javabyd10", "XX");
+        courseController.updateTrainerInCourse("javabyd9", "YY");
+        courseController.getCourtses();
     }
 }

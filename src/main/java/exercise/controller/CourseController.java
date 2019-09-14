@@ -50,4 +50,26 @@ public class CourseController {
             System.out.println("Nie udało się usunąć uczestnika kursu");
         }
     }
+    public void updateTrainerInCourse(String acronim, String trainer){
+        if(courseService.updateTrainerInCourse(acronim,trainer)){
+            System.out.println("Zmieniono trenera kursu na "+trainer);
+        }else {
+            System.out.println("Nie udało się zmienić trenera kursu");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
