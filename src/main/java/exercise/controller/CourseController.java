@@ -24,7 +24,11 @@ public class CourseController {
                           LocalDate date,
                           String trainer){
         // wywołaj metodę implementującą utworzenie kursu w logice biznesowej
-        courseService.addCourse(acronim,category,participants,date,trainer);
+        if(courseService.addCourse(acronim,category,participants,date,trainer)){
+            System.out.println("Utworzo kurs o nazwie: " + acronim);
+        } else {
+            System.out.println("Nie udało się utworzyć kursu");
+        }
     }
     public void getCourtses(){
         courses.forEach(System.out::println);
