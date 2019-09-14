@@ -37,7 +37,10 @@ public class CourseController {
             String acronim,
             String name,
             String lastname){
-        courseService.addParticipantToCourse(
-                acronim,name,lastname);
+        if(courseService.addParticipantToCourse(acronim,name,lastname)){
+            System.out.println("Dodano uczestnika do kursu ("+name+" "+lastname+")");
+        } else{
+            System.out.println("Nie udało się dodać uczestnika do kursu");
+        }
     }
 }

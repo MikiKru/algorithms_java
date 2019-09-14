@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         CourseController courseController = new CourseController();
+        // dodawanie kursów
         courseController.addCourse(
                 "javabyd10",
                 CourseCategory.dev_ops,
@@ -21,6 +22,9 @@ public class Main {
                 new ArrayList<>(),
                 LocalDate.now(),
                 "MK");
+        // dodawanie uczestników
+        courseController.addParticipantToCourse("javabyd11","Adam","Kowalski");
+
         courseController.getCourtses();
     }
 }
