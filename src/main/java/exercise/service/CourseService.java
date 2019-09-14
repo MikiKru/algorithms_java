@@ -11,6 +11,27 @@ import java.util.Optional;
 
 // klasa logiki biznesowej - implementacja i walidacja
 public class CourseService {
+    public boolean removeParticipantFromCourse(String acronim, int user_id){
+        if(getCourseByAcronim(acronim).isPresent()){
+            // wyszukany kurs
+            Course findedCourse = getCourseByAcronim(acronim).get();
+            // wyszukaj uwczestnika w znależionym kursie po id
+            if(findParticipantByIdInCourse(findedCourse,user_id).isPresent()){
+                Participant participantToRemove = findParticipantByIdInCourse(findedCourse,user_id).get();
+                // usunięcie uczestnika z kursu
+                findedCourse.removeParticipant(participantToRemove);
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+    // metoda wyszukująca uczestnika po id w danym kursie
+    public Optional<Participant> findParticipantByIdInCourse(Course findedCourse, int user_id){
+         return findedCourse.getParticipants().stream()
+                 .filter(participant -> participant.getUser_id() == user_id).findAny();
+    }
+
     public boolean addParticipantToCourse(
             String acronim,
             String name,
