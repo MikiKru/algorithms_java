@@ -6,7 +6,6 @@ import lombok.ToString;
 
 @Data
 @ToString
-@NoArgsConstructor
 public class Participant {
     // licznik uczestników - statyczny
     private static int id = 1;
