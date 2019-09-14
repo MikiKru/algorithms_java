@@ -22,6 +22,18 @@ public class Main {
                 new ArrayList<>(),
                 LocalDate.now(),
                 "MK");
+        courseController.addCourse(
+                "javabyd12",
+                CourseCategory.developer,
+                new ArrayList<>(),
+                LocalDate.of(2019,10,10),
+                "KK");
+        courseController.addCourse(
+                "javator1",
+                CourseCategory.analyst,
+                new ArrayList<>(),
+                LocalDate.of(2019,05,01),
+                "EE");
         // dodawanie uczestników
         courseController.addParticipantToCourse("javabyd11","Adam","Kowalski");
         courseController.addParticipantToCourse("javabyd11","Jan","Kot");
@@ -42,5 +54,8 @@ public class Main {
         courseController.updateTrainerInCourse("javabyd10", "XX");
         courseController.updateTrainerInCourse("javabyd9", "YY");
         courseController.getCourtses();
+
+        System.out.println("Filtrowanie");
+        courseController.findCourseByDateOrCategory(LocalDate.now(), CourseCategory.dev_ops);
     }
 }

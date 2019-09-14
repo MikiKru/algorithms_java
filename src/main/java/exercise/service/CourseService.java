@@ -18,7 +18,7 @@ public class CourseService {
             return CourseController.courses;
         } else if(date != null && category == null){
             return CourseController.courses.stream()
-                    .filter(course -> course.getDate() == date)
+                    .filter(course -> course.getDate().equals(date))
                     .collect(Collectors.toList());
         } else if(date == null){
             return CourseController.courses.stream()
@@ -26,7 +26,7 @@ public class CourseService {
                     .collect(Collectors.toList());
         } else {
             return CourseController.courses.stream()
-                    .filter(course -> (course.getCategory()==category && course.getDate() == date))
+                    .filter(course -> (course.getCategory()==category && course.getDate().equals(date)))
                     .collect(Collectors.toList());
         }
     }

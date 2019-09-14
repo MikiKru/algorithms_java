@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ba54d8-9206-40b6-9a30-71d950986e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exercise/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/service/CourseService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercise/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="266">
+              <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/exercise/service/CourseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="166">
+              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/main/java/exercise/model/CourseCategory.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/model/Participant.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/model/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exercise/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exercise/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercise/service/CourseService.java" />
       </list>
     </option>
@@ -262,7 +262,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568456246089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568457584291" />
     <property name="last_opened_file_path" value="D:/Projekty IT/RecycleManager" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -361,12 +361,12 @@
       <option name="presentableId" value="Default" />
       <updated>1567194571908</updated>
       <workItem from="1567194576217" duration="46893000" />
-      <workItem from="1568443045298" duration="11897000" />
+      <workItem from="1568443045298" duration="12668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58790000" />
+    <option name="totallyTimeSpent" value="59561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -381,7 +381,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.13456091" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37393767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -391,7 +391,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.012747875" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.012747875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -581,8 +581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercise/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="266">
+          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -605,8 +605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercise/service/CourseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="166">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
