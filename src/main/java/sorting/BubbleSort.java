@@ -21,7 +21,7 @@ public class BubbleSort {
                     numbers.set(j + 1, tmp);
                 }
             }
-            System.out.println("etap: " + i + " wynik: " + numbers);
+//            System.out.println("etap: " + i + " wynik: " + numbers);
         }
         return numbers;
     }

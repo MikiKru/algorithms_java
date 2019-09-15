@@ -20,13 +20,23 @@ public class Main {
             list.add(random.nextInt(1000));
         }
     }
-
     public static void main(String[] args) {
         Main main = new Main();
         main.generateNValues(10, main.list_10);
         main.generateNValues(100, main.list_100);
         main.generateNValues(1000, main.list_1000);
 
+        System.out.println(main.bubbleSort.getTimeInterval(main.list_10) + "ms");
+        System.out.println(main.bubbleSort.getTimeInterval(main.list_100) + "ms");
+        System.out.println(main.bubbleSort.getTimeInterval(main.list_1000) + "ms");
+
+        System.out.println(main.heapSort.getTimeInterval(main.list_10) + "ms");
+        System.out.println(main.heapSort.getTimeInterval(main.list_100) + "ms");
+        System.out.println(main.heapSort.getTimeInterval(main.list_1000) + "ms");
+
+        System.out.println(main.quickSort.getTimeInterval(main.list_10) + "ms");
+        System.out.println(main.quickSort.getTimeInterval(main.list_100) + "ms");
+        System.out.println(main.quickSort.getTimeInterval(main.list_1000) + "ms");
 
     }
 
