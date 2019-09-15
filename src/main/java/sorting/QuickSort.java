@@ -27,7 +27,12 @@ public class QuickSort {
         if (left < j) qs(numbers, left, j);
         if (i < right) qs(numbers, i, right);
     }
-
+    public long getTimeInterval(List<Integer> list){
+        long start = System.currentTimeMillis();
+        qsort(list);
+        long stop = System.currentTimeMillis();
+        return stop - start;
+    }
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>(Arrays.asList(1,3,2,1));
         new QuickSort().qsort(numbers);

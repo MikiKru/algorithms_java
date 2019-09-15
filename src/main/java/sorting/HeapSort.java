@@ -39,6 +39,12 @@ public class HeapSort
             heapify(numbers, n, largest);
         }
     }
+    public long getTimeInterval(List<Integer> list){
+        long start = System.currentTimeMillis();
+        sort(list);
+        long stop = System.currentTimeMillis();
+        return stop - start;
+    }
     public static void main(String args[]) {
         List<Integer> numbers = new ArrayList<>(Arrays.asList(33,2,1,55,4,65,6,7,2));
         HeapSort heapSort = new HeapSort();
