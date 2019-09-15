@@ -2,6 +2,7 @@ package sorting;
 
 import exercise.model.Course;
 import exercise.model.CourseCategory;
+import exercise.model.Participant;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,13 +16,13 @@ public class SortingComparator {
                 new Course(
                         "javabyd1",
                         CourseCategory.developer,
-                        new ArrayList<>(),
+                        new ArrayList<>(Arrays.asList(new Participant("X","Y"))),
                         LocalDate.of(2019,2,3),
                         "MK"),
                 new Course(
                         "javabyd2",
                         CourseCategory.analyst,
-                        new ArrayList<>(),
+                        new ArrayList<Participant>(Arrays.asList(new Participant("X","Y"), new Participant("X","Y"))),
                         LocalDate.of(2017,5,2),
                         "KK"),
                 new Course(
@@ -71,14 +72,21 @@ public class SortingComparator {
                 .sorted(Comparator.comparing(course -> course.getDate().getDayOfWeek()))
                 .collect(Collectors.toList());
     }
+    public List<Course> sortCoursesByNoParticipants(){
+        return courses.stream()
+                .sorted((course1, course2) -> String.valueOf(course2.getParticipants().size())
+                                                .compareTo(String.valueOf(course1.getParticipants().size())))
+                .collect(Collectors.toList());
+    }
     public static void main(String[] args) {
         SortingComparator sortingComparator = new SortingComparator();
 //        sortingComparator.sortCoursesByTrainer().forEach(System.out::println);
 //        sortingComparator.sortCoursesByCategory().forEach(System.out::println);
 //        sortingComparator.sortCoursesByDate().forEach(System.out::println);
 //        sortingComparator.sortCoursesByMonth().forEach(System.out::println);
-        sortingComparator.sortCoursesByDayOfWeek().stream()
-                .forEach(course -> System.out.println(course + " " + course.getDate().getDayOfWeek()));
+        sortingComparator.sortCoursesByNoParticipants().forEach(System.out::println);
+//        sortingComparator.sortCoursesByDayOfWeek().stream()
+//                .forEach(course -> System.out.println(course + " " + course.getDate().getDayOfWeek()));
 
     }
 
