@@ -6,10 +6,11 @@ import exercise.model.CourseCategory;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SortingComparator {
-    public static void main(String[] args) {
         List<Course> courses = new ArrayList<>(Arrays.asList(
                 new Course(
                         "javabyd1",
@@ -43,5 +44,18 @@ public class SortingComparator {
                         "LL")
         ));
 
+    public List<Course> sortCoursesByTrainer(){
+        return courses.stream()
+                .sorted(Comparator.comparing(Course::getTrainer).reversed())
+                .collect(Collectors.toList());
     }
+//    public List<Course> sortCoursesByCategory(){
+//
+//    }
+
+    public static void main(String[] args) {
+        SortingComparator sortingComparator = new SortingComparator();
+        sortingComparator.sortCoursesByTrainer().forEach(System.out::println);
+    }
+
 }

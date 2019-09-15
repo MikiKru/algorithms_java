@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ba54d8-9206-40b6-9a30-71d950986e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/SortingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/SortingComparator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sorting/SortingComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="10" column="7" selection-end-line="47" />
+            <state relative-caret-position="586">
+              <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568540959661" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568541400127" />
     <property name="last_opened_file_path" value="D:/Projekty IT/RecycleManager" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -210,20 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SortingAPI">
-    <configuration name="CustomQuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sorting.CustomQuickSort" />
-      <module name="Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sorting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SortingComparator">
     <configuration name="HeapSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sorting.HeapSort" />
       <module name="Algorithms" />
@@ -276,13 +262,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortingComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sorting.SortingComparator" />
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sorting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortingComparator" />
         <item itemvalue="Application.SortingAPI" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.HeapSort" />
         <item itemvalue="Application.QuickSort" />
-        <item itemvalue="Application.CustomQuickSort" />
       </list>
     </recent_temporary>
   </component>
@@ -297,12 +296,12 @@
       <option name="presentableId" value="Default" />
       <updated>1567194571908</updated>
       <workItem from="1567194576217" duration="46893000" />
-      <workItem from="1568443045298" duration="37238000" />
+      <workItem from="1568443045298" duration="37558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84131000" />
+    <option name="totallyTimeSpent" value="84451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -637,8 +636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sorting/SortingComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" column="7" selection-end-line="47" />
+        <state relative-caret-position="586">
+          <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
