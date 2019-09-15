@@ -12,7 +12,7 @@ public class QuickSort {
         int x, y;
         i = left;
         j = right;
-        x = numbers.get((left + right) / 2);
+        x = numbers.get((left + right) / 2); // element podziału
         do {
             while ((numbers.get(i) < x) && (i < right)) i++;
             while ((x < numbers.get(j)) && (j > left)) j--;
@@ -29,7 +29,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>(Arrays.asList(5,3,2,1,7,1,2,3));
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1,3,2,1));
         new QuickSort().qsort(numbers);
         System.out.println(numbers);
     }
