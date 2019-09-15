@@ -9,9 +9,9 @@ public class Main {
     BubbleSort bubbleSort = new BubbleSort();
     QuickSort quickSort = new QuickSort();
 
-    List<Integer> list_10 = new ArrayList<>();
     List<Integer> list_100 = new ArrayList<>();
     List<Integer> list_1000 = new ArrayList<>();
+    List<Integer> list_10000 = new ArrayList<>();
 
     // metoda generująca n losowych wartości
     private void generateNValues(int n, List<Integer> list){
@@ -22,22 +22,20 @@ public class Main {
     }
     public static void main(String[] args) {
         Main main = new Main();
-        main.generateNValues(10, main.list_10);
         main.generateNValues(100, main.list_100);
         main.generateNValues(1000, main.list_1000);
+        main.generateNValues(10000, main.list_10000);
 
-        System.out.println(main.bubbleSort.getTimeInterval(main.list_10) + "ms");
         System.out.println(main.bubbleSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.bubbleSort.getTimeInterval(main.list_1000) + "ms");
+        System.out.println(main.bubbleSort.getTimeInterval(main.list_10000) + "ms");
 
-        System.out.println(main.heapSort.getTimeInterval(main.list_10) + "ms");
         System.out.println(main.heapSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.heapSort.getTimeInterval(main.list_1000) + "ms");
+        System.out.println(main.heapSort.getTimeInterval(main.list_10000) + "ms");
 
-        System.out.println(main.quickSort.getTimeInterval(main.list_10) + "ms");
         System.out.println(main.quickSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.quickSort.getTimeInterval(main.list_1000) + "ms");
-
+        System.out.println(main.quickSort.getTimeInterval(main.list_10000) + "ms");
     }
-
 }
