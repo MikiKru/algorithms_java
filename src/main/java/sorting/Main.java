@@ -22,18 +22,22 @@ public class Main {
     }
     public static void main(String[] args) {
         Main main = new Main();
-        main.generateNValues(100, main.list_100);
-        main.generateNValues(1000, main.list_1000);
-        main.generateNValues(10000, main.list_10000);
-
+        main.generateNValues(1000, main.list_100);
+        main.generateNValues(10000, main.list_1000);
+        main.generateNValues(100000, main.list_10000);
+        System.out.println("BUBBLE SORT");
         System.out.println(main.bubbleSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.bubbleSort.getTimeInterval(main.list_1000) + "ms");
         System.out.println(main.bubbleSort.getTimeInterval(main.list_10000) + "ms");
-
+        System.out.println("BUBBLE SORT DYNAMIC");
+        System.out.println(main.bubbleSort.getTimeIntervalDynamic(main.list_100) + "ms");
+        System.out.println(main.bubbleSort.getTimeIntervalDynamic(main.list_1000) + "ms");
+        System.out.println(main.bubbleSort.getTimeIntervalDynamic(main.list_10000) + "ms");
+        System.out.println("HEAPSORT");
         System.out.println(main.heapSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.heapSort.getTimeInterval(main.list_1000) + "ms");
         System.out.println(main.heapSort.getTimeInterval(main.list_10000) + "ms");
-
+        System.out.println("QUICKSORT");
         System.out.println(main.quickSort.getTimeInterval(main.list_100) + "ms");
         System.out.println(main.quickSort.getTimeInterval(main.list_1000) + "ms");
         System.out.println(main.quickSort.getTimeInterval(main.list_10000) + "ms");

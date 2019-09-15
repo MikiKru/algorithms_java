@@ -57,7 +57,7 @@ public class BubbleSort {
             if(counter == 0){
                 isUnsorted = false;
             } else {
-                System.out.println(numbers);
+//                System.out.println(numbers);
             }
         }
         return numbers;
@@ -65,6 +65,12 @@ public class BubbleSort {
     public long getTimeInterval(List<Integer> list){
         long start = System.currentTimeMillis();
         bsort(list);
+        long stop = System.currentTimeMillis();
+        return stop - start;
+    }
+    public long getTimeIntervalDynamic(List<Integer> list){
+        long start = System.currentTimeMillis();
+        bsortDynamicWithTypes(list,"ASC");
         long stop = System.currentTimeMillis();
         return stop - start;
     }
