@@ -1,5 +1,6 @@
 package sorting;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -61,6 +62,13 @@ public class BubbleSort {
         }
         return numbers;
     }
+    public long getTimeInterval(List<Integer> list){
+        long start = System.currentTimeMillis();
+        bsort(list);
+        long stop = System.currentTimeMillis();
+        return stop - start;
+    }
+
     public static void main(String[] args) {
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.bsort(new ArrayList<>(Arrays.asList(3, 2, 4, 15, 3, 1, 3, 2, 1, 6, 9)))

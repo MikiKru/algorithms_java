@@ -40,7 +40,7 @@ public class HeapSort
         }
     }
     public static void main(String args[]) {
-        List<Integer> numbers = new ArrayList<>(Arrays.asList(4,2,5,5));
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(33,2,1,55,4,65,6,7,2));
         HeapSort heapSort = new HeapSort();
         heapSort.sort(numbers);
         System.out.println(numbers);
